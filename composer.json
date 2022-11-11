@@ -1,0 +1,43 @@
+{
+    "name": "punchlist/laravel-socialite-webflow",
+    "description": "A custom Webflow driver for Laravel Socialite",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tanner Campbell",
+            "email": "tanner@punchlist.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Punchlist\\SocialiteWebflow\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Punchlist\\SocialiteWebflow\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "laravel/socialite": "^5.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Punchlist\\SocialiteWebflow\\SocialiteWebflowServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/testbench package:test --no-coverage",
+        "pint": "vendor/bin/pint"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^7.11",
+        "nunomaduro/collision": "^6.3",
+        "laravel/pint": "^1.2"
+    }
+}

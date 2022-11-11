@@ -1,0 +1,23 @@
+{
+    "git.mergeEditor": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint",
+        "editor.formatOnSave": true
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "phpsab.snifferEnable": true,
+    "phpsab.executablePathCBF": "./vendor/bin/phpcbf",
+    "phpsab.executablePathCS": "./vendor/bin/phpcs",
+    "phpsab.snifferShowSources": true,
+    "phpsab.snifferMode": "onType",
+    "cSpell.words": [
+        "punchlist",
+        "webflow"
+    ]
+}

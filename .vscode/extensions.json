@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "bmewburn.vscode-intelephense-client",
+        "donjayamanne.githistory",
+        "DotJoshJohnson.xml",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "MehediDracula.php-namespace-resolver",
+        "open-southeners.laravel-pint",
+        "redhat.vscode-yaml",
+        "SanderRonde.phpstan-vscode",
+        "valeryanm.vscode-phpsab",
+        "xdebug.php-debug"
+    ]
+}
