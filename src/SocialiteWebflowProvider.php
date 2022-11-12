@@ -52,9 +52,9 @@ class SocialiteWebflowProvider extends AbstractProvider
                 'Authorization' => 'Bearer ' . $token,
                 'Content-Type' => 'application/json',
             ],
-        ])['user'];
+        ]);
 
-        return json_decode($response->getBody()->getContents(), true);
+        return json_decode($response->getBody()->getContents(), true)['user'];
     }
 
     /**
