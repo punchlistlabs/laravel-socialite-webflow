@@ -46,7 +46,7 @@ class SocialiteWebflowProvider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->post($this->getApiUrl() . '/user', [
+        $response = $this->getHttpClient()->get($this->getApiUrl() . '/user', [
             'headers' => [
                 'cache-control' => 'no-cache',
                 'Authorization' => 'Bearer ' . $token,
