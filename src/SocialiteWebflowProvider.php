@@ -35,7 +35,7 @@ class SocialiteWebflowProvider extends AbstractProvider
 
     protected function getApiUrl()
     {
-        return 'https://api.webflow.com';
+        return config('services.webflow.api_url', 'https://api.webflow.com');
     }
 
     /**
@@ -46,11 +46,11 @@ class SocialiteWebflowProvider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->post($this->getWebflowUrl() . '/user', [
+        $response = $this->getHttpClient()->post($this->getApiUrl() . '/user', [
             'headers' => [
                 'cache-control' => 'no-cache',
                 'Authorization' => 'Bearer ' . $token,
-                'Content-Type' => 'application/x-www-form-urlencoded',
+                'Content-Type' => 'application/json',
             ],
         ]);
 
@@ -58,6 +58,9 @@ class SocialiteWebflowProvider extends AbstractProvider
     }
 
     /**
+     * Format user data
+     *
+     * @param  array  $user - array of user data
      * @return User
      */
     protected function mapUserToObject(array $user)
