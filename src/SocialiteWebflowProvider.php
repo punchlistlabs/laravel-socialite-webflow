@@ -65,10 +65,15 @@ class SocialiteWebflowProvider extends AbstractProvider
      */
     protected function mapUserToObject(array $user)
     {
+        // check names since data doesn't always looks consistent
+        $firstName = isset($user['firstName']) ? $user['firstName'] : '';
+        $lastName = isset($user['lastName']) ? $user['lastName'] : '';
+        $name = $firstName . ' ' . $lastName;
+
         return (new User())->setRaw($user)->map([
             'id' => $user['_id'],
             'nickname' => null,
-            'name' => $user['firstName'] . ' ' . $user['lastName'],
+            'name' => $name,
             'email' => $user['email'],
             'avatar' => 'https://www.gravatar.com/avatar/' . md5($user['email']),
         ]);
