@@ -53,4 +53,4 @@ Development of this package is sponsored by Punchlist learn more [about us](http
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/punchlistlabs/laravel-socialite-webflow/blob/main/LICENSE) for more information.
